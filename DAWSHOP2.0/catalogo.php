@@ -7,19 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      
-          <div class="enlaces">
-         <nav>
-             <a href="index.html">Inicio</a> 
-             <a href="catalogo.html">Catalogo</a> 
-              <a href="promociones.html">Promociones</a>
-            <a href="dondeEstamos.html">Donde estamos</a> 
-        </nav>
-            </div>
-        <hr>
-</header>
-
+  
+       <?php 
+     require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php'
+   ?>
+     <div class="productos">
         <h2> <i>PRODUCTOS</i></h2>
         <p> <strong> Productos de LV </strong> </p>
         <p> Louis Vuitton ofrece una amplia gama de productos de lujo, incluyendo bolsos, maletas, ropa, calzado, accesorios y joyería. Sus diseños son reconocidos por su elegancia, calidad y el icónico monograma LV. La marca combina artesanía tradicional con innovación moderna para crear artículos exclusivos que reflejan un estilo de vida sofisticado. </p>
@@ -40,10 +32,10 @@
             <p>Precio de 2500€</p>  
             <img src="img/bolso5.avif" alt="Bolso 5" >
         </ol>
-    </header>
+    </div>
+     <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php'
+        ?>
 </body>
-<footer>
-<hr>
- <p>Reservado los derechos de autor</p>
-</footer>
+
 </html>

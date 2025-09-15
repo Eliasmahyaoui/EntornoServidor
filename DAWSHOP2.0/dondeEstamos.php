@@ -6,18 +6,13 @@
     <title>Donde Estamos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header>
-       <div class="enlaces">
-         <nav>
-             <a href="index.html">Inicio</a> 
-            <a href="catalogo.html">Catalogo</a> 
-            <a href="promociones.html">Promociones</a>
-             <a href="dondeEstamos.html">Donde Estamos</a> 
-        </nav>
-            </div>
-        <hr>
-</header>
+
 <body>
+ <?php 
+     require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php'
+   ?>
+
+<div class="Contacto">
     <h1>Contacto</h1>
     <p>Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes medios:</p>
 
@@ -45,9 +40,11 @@
         <li>Email:louisvuittoncompany@gmail.com</li>
         <li>Dirección: Calle de la Moda, 123, Ciudad de la Moda, País de la Moda</li>
     </ul>
+</div>
+      <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php'
+        ?>
 </body>
 <hr>
-<footer>
- <p>Reservado los derechos de autor</p>
-</footer>
+
 </html>
