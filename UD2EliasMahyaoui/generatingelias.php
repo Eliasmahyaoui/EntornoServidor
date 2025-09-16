@@ -20,20 +20,23 @@
     <article id= "sec1">
         <h1>Seccion 1</h1>
         <?php
-        $numAleatorio = rand(-200,200)
+        $numAleatorio = rand(-200,200);
 
-        if ($numAleatorio<0) {
-            echo 'numero negativo'
+        if ($numAleatorio<=0) {
+            echo 'numero negativo';
         }else if ($numAleatorio==0) {
-            echo 'cero'
+            echo 'cero';
         }else {
-           echo 'numero positivo'
+           echo 'numero positivo';
         } 
         ?> 
     </article>
     
      <article id ="sec2">
-        
+        <?php
+        $notamedia = rand(0,10)
+        ?> 
+
     </article>
 
      <article id="sec3">
