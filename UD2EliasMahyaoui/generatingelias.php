@@ -33,10 +33,42 @@
     </article>
     
      <article id ="sec2">
-        <?php
-        $notamedia = rand(0,10)
-        ?> 
+        <h1>Seccion 2</h1>
 
+        <?php
+        $notamedia = rand(0,10);
+        echo "Nota: $notamedia : ";
+
+    switch ($notamedia) {
+        case 0:
+        case 1:
+        case 2:
+            echo "Insuficiente";
+            break;
+        case 3:
+        case 4:
+            echo "Necesita mejorar";
+            break;
+        case 5:
+            echo "Aprobado justito";
+            break;
+        case 6:
+            echo "Aprobado";
+            break;
+        case 7:
+            echo "Notable bajo";
+            break;
+        case 8:
+            echo "Notable";
+            break;
+        case 9:
+        case 10:
+            echo "Sobresaliente";
+            break;
+        default:
+            echo "Valor no válido";
+    }
+    ?>
     </article>
 
      <article id="sec3">
