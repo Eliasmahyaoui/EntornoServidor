@@ -11,6 +11,7 @@
        <?php 
      require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php'
    ?>
+
      <div class="productos">
         <h2> <i>PRODUCTOS</i></h2>
         <p> <strong> Productos de LV </strong> </p>

@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
    <?php 
      require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php'
    ?>
+
   <div class="Biografia">
     <h1> <img src="img/Louis-Vuitton-logo.png" width="1000" alt="Logo LV"> </h1>
       <h2><b>BIOGRAFIA DE LV</b></h2>

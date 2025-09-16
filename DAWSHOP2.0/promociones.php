@@ -8,7 +8,8 @@
 </head>
 <body>
       <?php 
-     require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php'
+     require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php';
+     
    ?>
     <div class="promociones">
         <h1>Lista de promociones fin de temporada</h1>
