@@ -69,15 +69,36 @@
             echo "Valor no válido";
     }
     ?>
-    </article>
+    <article id="sec3">
+    <h1>Seccion 3</h1>
+    <?php
+    $numAleatorio2 = rand(0,100);
 
-     <article id="sec3">
-        
-    </article>
+    for ($i = 0; $i <= 20; $i++) {
+        echo "<h2>Tabla del $i</h2>";
+        echo "<ul>";
+        for ($j = 0; $j <= 10; $j++) {
+            $resultado = $i * $j;
+            echo "<li>$i x $j = $resultado</li>";
+        }
+        echo "</ul>";
+    }
+    ?>
+</article>
 
+    <table>
      <article id= "sec4">
-        
+         <h1>Seccion 4</h1>
+         <?php
+        $numAleaotoriofilas= rand(0,20);
+        $numAleatoriocolumnas= rand(0,20);
+    
+
+
+
+        ?>
     </article>
+    </table>
 
      <article id= "sec5">
         
