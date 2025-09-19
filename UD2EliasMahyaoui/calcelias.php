@@ -8,7 +8,7 @@
 <body>
     <?php
     //Declaramos dos variables num1 y num2
-    $num1=3;
+    $num1=10;
     $num2=5;
     //Declaramos todas las variables de sum,rest,mult,div 
     // y le damos el valor correspondiente
@@ -22,6 +22,18 @@
     echo "La resta es: $resta .<br>";
     echo "La multipicaciones: $mult .<br>";
     echo "La division es: $div .<br>";
+
+    //Ahora comprobaremos que numero es mas grande
+    if ($num1==$num2) {
+        echo "el numero . $num1 .  y el numero $num2 . son iguales";
+    }else if ($num1>$num2) {
+        echo "el numero . $num1 . es mas grande que . $num2";
+    }else{
+        echo "el numero . $num2 . es mas grande que . $num1";
+    }
+         
+    
+
     ?>
 </body>
 </html>

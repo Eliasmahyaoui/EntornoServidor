@@ -11,7 +11,8 @@
          <nav>
              <a href="generatingelias.php">generatingelias</a> 
              <a href="calcelias.php">calcelias</a> 
-              <a href="tableelias.php">tableelias</a>
+             <a href="tableelias.php">tableelias</a>
+             <a href= "sortingarrayelias.php">sortingarrayelias.php</a>
         </nav>
             </div>
 

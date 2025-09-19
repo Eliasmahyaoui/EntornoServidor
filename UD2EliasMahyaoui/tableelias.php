@@ -9,29 +9,24 @@
     
     <table>
     <?php
+     //Muestra una tabla de multiplicar de 10*10;
 
-    //Muestra una tabla de multiplicar de 10*10;
+     //Variables
+        $filas=10;
+        $columnas=10;
 
-    for ($i=0; $i < ; $10++) { 
-       echo" <tr>";
-        for ($j=0; $j < ; $j10++) { 
-            echo "<td>"
-        }
+     //Primera tenemos que hacer las filas 
+        for ($i=1; $i <=$filas; $i++) { 
+            echo"<tr>$i </tr>";
+            //Despues hacemos las columnas
+            for ($j=1; $j <=$columnas ; $j++) {
+                $resultado = $i * $j; 
+                echo "<td> $resultado </td>";
+        
+       }
     }
 
-
-
-
-
     ?>
-
-
-
-
-
     </table>
-
-
-
 </body>
 </html>
