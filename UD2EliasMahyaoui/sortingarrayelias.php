@@ -21,32 +21,10 @@
    }
    echo "<br>";
 
-   for ($i = 0; $i < 9; $i++) { // 9 porque el último ya estará en su sitio
-    $minIndex = $i;
-    
-    for ($j = $i + 1; $j < 10; $j++) {
-        if ($nums[$j] < $nums[$minIndex]) {
-            $minIndex = $j;
-        }
-    }
-    
-    // intercambiar si hace falta
-    if ($minIndex != $i) {
-        $temp = $nums[$i];
-        $nums[$i] = $nums[$minIndex];
-        $nums[$minIndex] = $temp;
-    }
-}
+   
 
-echo "Array ordenado: ";
-for ($i = 0; $i < 10; $i++) {
-    echo $nums[$i] . " ";
-}
 ?>
 
-
-
-    ?>
 
 </body>
 </html>
