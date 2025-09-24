@@ -7,5 +7,18 @@
 </head>
 <body>
     
+    <h1>Black Jack Elias</h1>  
+     
+     /* Incluye el header */  
+    <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php');
+    ?>
+    
+
+     <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
+
+    ?>
+
 </body>
 </html>

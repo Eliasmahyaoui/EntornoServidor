@@ -27,7 +27,6 @@ function generarBarajaFrancesa() {
     // Agregar comodines
     $deck[] = ['suit' => 'comodin', 'value' => '0', 'image' => 'jok_1.png'];
     $deck[] = ['suit' => 'comodin', 'value' => '0', 'image' => 'jok_2.png'];
-
     return $deck;
 }
 
