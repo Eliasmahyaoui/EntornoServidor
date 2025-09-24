@@ -42,7 +42,6 @@
         // echo $card['value'] .'-'. $card['suit'];
         // echo $card['image'];
         echo '<img src="/images/baraja/'.$card['image'].'" alt="card">';
-
         echo '<br>';
     }
     
