@@ -1,12 +1,7 @@
 
 <?php
-function generarBarajaFrancesa() {
-    $suits = [
-        'corazones' => 'cor',
-        'diamantes' => 'dia',
-        'picas' => 'pic',
-        'treboles' => 'tre'
-    ];
+function generateFrenchDeck() {
+    $suits = ['corazones' => 'cor', 'diamantes' => 'dia','picas' => 'pic','treboles' => 'tre' ];
 
     $values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 

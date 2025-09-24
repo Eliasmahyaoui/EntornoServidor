@@ -13,7 +13,7 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php');
     ?>
 
-    <img src = "images/barajaCartas.jpg" alt = "Baraja de cartas";
+    <img src = "images/barajaCartas.jpg" alt = "Baraja de cartas">
     <br>
     <?php
    
