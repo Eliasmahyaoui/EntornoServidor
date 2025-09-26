@@ -1,65 +1,42 @@
-/* ====== Estilos generales ====== */
+/*css*/
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #b05e5e;
+    text-align: center;
     margin: 0;
     padding: 0;
-    text-align: center;
-    color: #333;
 
-    
 }
 
-/* ====== Título ====== */
 h1 {
-    font-size: 2rem;
-    margin: 20px 0;
-    color: #444;
+    color: #141313;
+    margin-top: 20px;
 }
 
-/* ====== Imagen ====== */
 img {
-    max-width: 120px;
-    width: 90%;
+    margin: 20px;
+    max-width: 100px;
+    width: 50%;
+    border: 2px solid #333;
     border-radius: 8px;
-    margin: 20px 0;
+
 }
 
-/* ====== Header y Footer ====== */
-header, footer {
-    background-color: #8f0000;
-    color: white;
-    padding: 10px;
-    font-size: 0.9rem;
-
-    
-    
+nav ul {
+    list-style: none;
+    /* quita viñetas */
+    margin: 0;
+    padding: 100;
+    display: flex;
+    /* alinear en fila */
+    justify-content: center;
+    /* centrar los enlaces */
+    gap: 20px;
+    /* espacio entre ellos */
+    display: flex;
+    color: beige;
 }
 
-nav {
-  display: flex;       /* 🔑 Esto los pone uno al lado del otro */
-  justify-content: center; /* o center si quieres centrarlos */
-  gap: 20px;          /* espacio entre enlaces */
-  
+il {
+    color: beige;
 }
-
-nav ul{
-  text-decoration: none;  /*quita el subrayado*/ 
-  color: rgb(255, 255, 255);    /*color del texto */
-  font-size: 30px;        /*tamaño del texto */
-  
-  }
-li{
-    display: inline;
-    
-   
-}
-a{
-    color: #fdfdfd;
-    text-align: center;
-    display: inline-block;
-    
-}
-
-
-
