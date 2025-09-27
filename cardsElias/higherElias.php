@@ -1,5 +1,3 @@
-
-/*CODIGO HIGUER*/
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,23 +67,59 @@
         $card1 = $hand1[$i];
         $card2 = $hand2[$i];
 
-        //Si la carta de la primera tiene comodin  y la carta de la segunda tiene comodin 
-        if ($card1['suit']=='comodin' && $card2['suit'] == 'comodin') {
-            if ($points1== $points2) {
-                $points1-=2;
-                $points2-=2;
-                
-            }else if ($points1>$points2) {
-                $points1-=2;
-            }else{
-                $points2-=2;
+        //Si la carta de la primera tiene comodin  y la carta de la segunda tiene comodin   se restarán 2 puntos al jugador que lleve más puntos.
+        if ($card1['suit'] != 'comodin' && $card2['suit'] == 'comodin') {
+            if ($points1 == $points2) {
+                $points1 -= 2;
+                $points2 -= 2;
+            } else if ($points1 > $points2) {
+                $points1 -= 2;
+            } else {
+                $points2 -= 2;
             }
-           
 
-        } else if ($hand1== $hand2) {
-           
+            // Si las dos cartas tienen el mismo valor y no son comodinesse sumará un punto a cada  jugador.
+        } else if ($card1['value'] == $card2['value'] && $card1['suit'] != 'comodin' && $card2['suit'] != 'comodin') {
+
+            $points1 += 1;
+            $points2 += 1;
+        }
+
+        // Si una carta  es mayor que la otra se sumarán 2 puntos al jugador con esa carta
+        if ($card1['value'] > $card2['value']) {
+            $points1 += 2;
+        } else {
+            $points2 += 2;
+        }
+
+        // Si una carta es un comodín y la otra no, se sumarán 2 puntos al jugador con elcomodín y se restará 1 punto al otro jugador.    
+        if ($card1['suit'] == 'comodin' && $card2['suit'] != 'comodin') {
+            $points1 += 2;
+            $points2 -= 1;
+        } else if ($card2['suit'] == 'comodin' && $card1['suit'] != 'comodin') {
+            $points2 += 2;
+            $points1 -= 1;
         }
     }
+
+    echo '<h2>' . "Resultado de la partida" . '</h2>';
+
+
+    // Por último, se deberán mostrar las puntuaciones de los dos jugadores e
+    echo '<strong>Puntuacion ' . $player1 . ' ' .  $points1 . ' puntos<strong>';
+    echo "<br>";
+    echo 'Puntuacion ' . $player2 . ' ' . $points2 . ' puntos ';
+    echo "<br>";
+
+    // Indicar cuál de ellos ha ganado.
+    if ($points1 > $points2) {
+        echo 'Ganador ' . $player1;
+    } else {
+        echo 'Ganador ' . $player2;
+    }
+
+
+
     ?>
     <?php
 
