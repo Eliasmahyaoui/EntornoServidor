@@ -12,7 +12,7 @@
 <body>
 
     
-    <div id="header-higuerElias">
+    <div id="header-principal">
 
         <h1>Higher Card</h1>
         <?php
@@ -21,7 +21,7 @@
     </div>
 
 
-    <div id="contenido-higuerElias">
+    <div id="contenido-principal">
         <?php
         /*Aqui le pasamos la funcioon de getDesk */
         require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/getDeck.inc.php');
@@ -126,7 +126,7 @@
     </div>
 
 
-    <div id="footer-higuerElias">
+    <div id="footer-principal">
         <?php
         require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
         ?>

@@ -1,5 +1,5 @@
 <header>
-    <div id="header-principal">
+    <div id="header-sitio">
         <nav>
             <ul>
                 <li><a href="index.php">Inicio</a></li>

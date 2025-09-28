@@ -11,7 +11,7 @@
 
 <body>
 
-    <div id="header-index">
+    <div id="header-principal">
         <h1>Cartas cartitas</h1>
         <?php
         require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php');
@@ -19,21 +19,24 @@
     </div>
 
 
-    <div id= "contenido-index"> 
-        <img src="images/barajaCartas.jpg" alt="Baraja de cartas">
-    </div>
-   
-
-
-    <div id= "footer-index">
-    <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
-    ?>
-
+    <div id="contenido-principal">
+        <section id="imagen-inicio">
+            <img src="images/imagen-casino.jpg" alt="imagenCasino">
+        </section>
 
     </div>
 
-    
+
+
+    <div id="footer-principal">
+        <?php
+        require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
+        ?>
+
+
+    </div>
+
+
 </body>
 
 </html>
