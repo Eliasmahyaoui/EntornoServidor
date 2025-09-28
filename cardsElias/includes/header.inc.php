@@ -1,5 +1,5 @@
 <header>
-    <div class="cabecera">
+    <div id="header-principal">
         <nav>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
