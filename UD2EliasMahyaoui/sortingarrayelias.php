@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arrays</title>
 </head>
 <body>
     <?php
@@ -20,6 +20,27 @@
         echo $nums[$i] . " ";
    }
    echo "<br>";
+
+   /*Ordenar el array por seleccion directa sin usar ninguna función.*/
+    for ($i=0; $i < 10 ; $i++) { 
+          for ($j=$i+1; $j < 10 ; $j++) { 
+                if ($nums[$i] > $nums[$j]) {
+                 //intercambiamos
+                 $aux = $nums[$i];
+                 $nums[$i] = $nums[$j];
+                 $nums[$j] = $aux;
+                }
+          }
+    }
+    //mostramos el array ordenado
+    echo "<h3> Array ordenado:</h3>";
+    for ($i=0; $i <10 ; $i++) {
+        echo $nums[$i] . " ";
+   }    
+
+
+
+
 
    
 

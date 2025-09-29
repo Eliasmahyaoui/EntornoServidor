@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio</title>
 </head>
 <body>
 
@@ -13,6 +13,7 @@
              <a href="calcelias.php">calcelias</a> 
              <a href="tableelias.php">tableelias</a>
              <a href= "sortingarrayelias.php">sortingarrayelias.php</a>
+             <a href="calculatingelias.php">calculatingelias</a>
         </nav>
             </div>
 
