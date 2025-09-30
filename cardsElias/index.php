@@ -32,8 +32,6 @@
         <?php
         require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
         ?>
-
-
     </div>
 
 

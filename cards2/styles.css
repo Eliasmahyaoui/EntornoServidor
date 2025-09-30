@@ -1,0 +1,63 @@
+/* Estilo básico para toda la web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5f5a5a;
+    margin: 0;
+    text-align: center;
+}
+
+/* Cabecera */
+header {
+    background-color: #8e8a8a;
+    color: white;
+    padding: 10px;
+}
+a
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Jugadores y cartas */
+.jugador {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Cartas */
+.jugador img {
+    width: 60px;
+    margin: 2px;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+

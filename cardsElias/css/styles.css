@@ -25,10 +25,9 @@ h1,h2 {
 }
 
 /*Solo para las cartas de Higuer*/
-#cartas-higuer img {
+#cartas-higuer {
     margin: 5px;
-    max-width: 100px;
-    width: 60%;
+    max-width: 50px;
     display: inline-flex;
     text-align: center;
 

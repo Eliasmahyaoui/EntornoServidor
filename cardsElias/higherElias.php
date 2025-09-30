@@ -50,7 +50,7 @@
         //ahora deberemos mostrar las cartas que tiene cada jugador.
         ?>
     </div>
-    <div id="cartas-higher img">
+    <div id="cartas-higher">
         <?php
         echo '<h2>' . $player1 . '</h2>';
 
