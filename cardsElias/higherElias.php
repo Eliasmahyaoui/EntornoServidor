@@ -11,7 +11,6 @@
 
 <body>
 
-    
     <div id="header-principal">
 
         <h1>Higher Card</h1>
@@ -47,8 +46,12 @@
         $player1 = "Harry";
         $player2 = "Voldemord";
 
-        //ahora deberemos mostrar las cartas que tiene cada jugador.
 
+        //ahora deberemos mostrar las cartas que tiene cada jugador.
+        ?>
+    </div>
+    <div id="cartas-higher img">
+        <?php
         echo '<h2>' . $player1 . '</h2>';
 
         foreach ($hand1 as $card) {
@@ -62,75 +65,81 @@
 
             echo '<img src="/images/baraja/' . $card['image'] . '" alt="card">';
         }
+        ?>
 
-        //Los puntos del jugador 1 y jugador 2
-        $points1 = 0;
-        $points2 = 0;
+        <div id=puntuacion-players>
+            <?php
+            //Los puntos del jugador 1 y jugador 2
+            $points1 = 0;
+            $points2 = 0;
 
-        //Recorremos cada carta individual
-        for ($i = 0; $i < 10; $i++) {
-            $card1 = $hand1[$i];
-            $card2 = $hand2[$i];
+            //Recorremos cada carta individual
+            for ($i = 0; $i < 10; $i++) {
+                $card1 = $hand1[$i];
+                $card2 = $hand2[$i];
 
-            //Si la carta de la primera tiene comodin y la carta de la segunda tiene comodin se restarán 2 puntos al jugador que lleve más puntos.
-            if ($card1['suit'] != 'comodin' && $card2['suit'] == 'comodin') {
-                if ($points1 == $points2) {
-                    $points1 -= 2;
-                    $points2 -= 2;
-                } else if ($points1 > $points2) {
-                    $points1 -= 2;
-                } else {
-                    $points2 -= 2;
+                //Si la carta de la primera tiene comodin y la carta de la segunda tiene comodin se restarán 2 puntos al jugador que lleve más puntos.
+                if ($card1['suit'] != 'comodin' && $card2['suit'] == 'comodin') {
+                    if ($points1 == $points2) {
+                        $points1 -= 2;
+                        $points2 -= 2;
+                    } else if ($points1 > $points2) {
+                        $points1 -= 2;
+                    } else {
+                        $points2 -= 2;
+                    }
+
+                    // Si las dos cartas tienen el mismo valor y no son comodinesse sumará un punto a cada jugador.
+                } else if ($card1['value'] == $card2['value'] && $card1['suit'] != 'comodin' && $card2['suit'] != 'comodin') {
+
+                    $points1 += 1;
+                    $points2 += 1;
                 }
 
-                // Si las dos cartas tienen el mismo valor y no son comodinesse sumará un punto a cada jugador.
-            } else if ($card1['value'] == $card2['value'] && $card1['suit'] != 'comodin' && $card2['suit'] != 'comodin') {
+                // Si una carta es mayor que la otra se sumarán 2 puntos al jugador con esa carta
+                if ($card1['value'] > $card2['value']) {
+                    $points1 += 2;
+                } else {
+                    $points2 += 2;
+                }
 
-                $points1 += 1;
-                $points2 += 1;
+                // Si una carta es un comodín y la otra no, se sumarán 2 puntos al jugador con elcomodín y se restará 1 punto al otro jugador.
+                if ($card1['suit'] == 'comodin' && $card2['suit'] != 'comodin') {
+                    $points1 += 2;
+                    $points2 -= 1;
+                } else if ($card2['suit'] == 'comodin' && $card1['suit'] != 'comodin') {
+                    $points2 += 2;
+                    $points1 -= 1;
+                }
             }
 
-            // Si una carta es mayor que la otra se sumarán 2 puntos al jugador con esa carta
-            if ($card1['value'] > $card2['value']) {
-                $points1 += 2;
+            echo '<h2>' . "Resultado de la partida" . '</h2>';
+            ?>
+        </div>
+
+        <div>
+            <?php
+            // Por último, se deberán mostrar las puntuaciones de los dos jugadores e
+            echo '<strong>Puntuacion ' . $player1 . ' ' . $points1 . ' puntos<strong>';
+            echo "<br>";
+            echo 'Puntuacion ' . $player2 . ' ' . $points2 . ' puntos ';
+            echo "<br>";
+
+            // Indicar cuál de ellos ha ganado.
+            if ($points1 > $points2) {
+                echo 'Ganador ' . $player1;
             } else {
-                $points2 += 2;
+                echo 'Ganador ' . $player2;
             }
-
-            // Si una carta es un comodín y la otra no, se sumarán 2 puntos al jugador con elcomodín y se restará 1 punto al otro jugador.
-            if ($card1['suit'] == 'comodin' && $card2['suit'] != 'comodin') {
-                $points1 += 2;
-                $points2 -= 1;
-            } else if ($card2['suit'] == 'comodin' && $card1['suit'] != 'comodin') {
-                $points2 += 2;
-                $points1 -= 1;
-            }
-        }
-
-        echo '<h2>' . "Resultado de la partida" . '</h2>';
+            ?>
+        </div>
 
 
-        // Por último, se deberán mostrar las puntuaciones de los dos jugadores e
-        echo '<strong>Puntuacion ' . $player1 . ' ' . $points1 . ' puntos<strong>';
-        echo "<br>";
-        echo 'Puntuacion ' . $player2 . ' ' . $points2 . ' puntos ';
-        echo "<br>";
-
-        // Indicar cuál de ellos ha ganado.
-        if ($points1 > $points2) {
-            echo 'Ganador ' . $player1;
-        } else {
-            echo 'Ganador ' . $player2;
-        }
-        ?>
-    </div>
-
-
-    <div id="footer-principal">
-        <?php
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
-        ?>
-    </div>
+        <div id="footer-principal">
+            <?php
+            require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
+            ?>
+        </div>
 
 </body>
 
