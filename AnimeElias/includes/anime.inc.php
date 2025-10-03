@@ -82,7 +82,7 @@ class Anime
 
    }
 
-   public function removeCharacter(): mixed
+   public function removeCharacter()
    {
 
 
