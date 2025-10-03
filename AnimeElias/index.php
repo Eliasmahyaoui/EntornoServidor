@@ -2,18 +2,19 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/anime.inc.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/character.inc.php');
 
+// Crear animes
 $anime1 = new Anime("Naruto", "Masashi Kishimoto", "Shonen", 220, 2002);
 $anime2 = new Anime("Sailor Moon", "Naoko Takeuchi", "Shojo", 200, 1992);
 $anime3 = new Anime("Attack on Titan", "Hajime Isayama", "Seinen", 75, 2013);
 
 $animes = [$anime1, $anime2, $anime3];
 
-// Añadir personajes
-$anime1->addCharacter(new Character("Naruto Uzumaki", "humano", 17, "Konoha"));
-$anime1->addCharacter(new Character("Sasuke Uchiha", "humano", 17, "Konoha"));
+// Añadir personajes (solo name, age y species)
+$anime1->addCharacter(new Character("Naruto Uzumaki", 17, "humano"));
+$anime1->addCharacter(new Character("Sasuke Uchiha", 17, "humano"));
 
-$anime3->addCharacter(new Character("Eren Yeager", "humano", 19, "Shiganshina"));
-$anime3->addCharacter(new Character("Mikasa Ackerman", "humano", 19, "Shiganshina"));
+$anime3->addCharacter(new Character("Eren Yeager", 19, "humano"));
+$anime3->addCharacter(new Character("Mikasa Ackerman", 19, "humano"));
 ?>
 <!DOCTYPE html>
 <html lang="es">
