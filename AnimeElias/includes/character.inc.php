@@ -18,14 +18,14 @@ class character
         $this->genre = $genre;
         $this->species = $species;
 
-
-        if (checkAge($age) == true) {
+        //Metodo checkAge desde el constructor
+        if ($this->checkAge($age) == true) {
             $this->age = $age;
         } else {
             $this->age = -1;
         }
 
-        if (checkSpecies($species) == true) {
+        if ($this->checkSpecies($species) == true) {
             $this->species = $species;
         } else {
             $this->species = 'desconocida';
@@ -55,22 +55,38 @@ class character
 
     public function __set($property, $value)
     {
-        $this->$property = $value;
-        checkAge($age); // esto rtiene que ser diferente
-        checkSpecies(); //Esto tiene que ser diferete
+        if ($property($this, $property)) {
+            if ($property === 'age') {
+                $this->checkAge($value);
+                $this->age = $value; // asignación directa desde dentro de la clase está bien
+                return;
+            }
+            // Asignación directa para cualquier propiedad declarada
+            $this->$property = $value;
+            return;
+        } else {
+
+
+
+            if ($property === 'species') {
+                if ($this->checkSpecies($value)) {
+                    $this->species = $value;
+                } else {
+                    throw new \Exception("Especie inválida: $value");
+                }
+                return;
+            }
+
+            $this->$property = $value;
+        }
     }
+
 
     public function __get($property)
     {
         return  $this->$property;
     }
 }
-
-
-
-
-
-
 
 
 ?>

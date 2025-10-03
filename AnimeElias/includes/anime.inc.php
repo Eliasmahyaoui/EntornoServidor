@@ -8,7 +8,7 @@ class Anime
     private int $year;
     private string $genre;
     private int $episodes;
-    $nombres=[];
+    private array $characters;
 
     //constructor
 
@@ -20,9 +20,16 @@ class Anime
         $this->year = $year;
         $this->genre = $genre;
         $this->episodes = $episodes;
+    
+         // Validar y asignar género usando checkGenre
+        if ($this->checkGenre($genre)) {
+            $this->genre = $genre;
+        } else {
+            $this->genre = "desconocido";
+        }
 
-
-      
+        // Validar y asignar año usando checkYear
+        $this->year = $this->checkYear($year) ? $year : -1;
     }
 
     //Metodos 
@@ -35,30 +42,82 @@ class Anime
         return false;
     }
 
-    function checkGenre($genre)
+    function checkGenre($genre): bool
     {
-        $encontrado= false;
         if ($genre== "Kodomo" || $genre== "Shonen"|| $genre== "Shojo"||$genre== "Seinen"|| $genre== "Josei" ) {
-           $encontrado= true;
+           return true;
         }else{
-            $encontrado= false;
+            return false;
+        }
+    }
+
+    public function checkCharacter(Character $character): bool
+    {
+        //Esto  comprueba si la variable no esta vacia  
+        if (isset($this->characters)==true) {
+            return in_array($character, $this->characters);
+        }else {
+            return false;
         }
     }
 
 
+   public function countCharacter(): int
+   {
+
+        return count($this->characters);
+
+   }
+
+   public function addCharacter( Character $character): bool
+   {
+
+        //Esto  comprueba si la variable no esta vacia  
+        if (isset($this->characters)==true) {
+            return in_array($character, $this->characters);
+        }else {
+            return false;
+        }
+
+
+   }
+
+   public function removeCharacter(): mixed
+   {
+
+
+   }
+
     //getters y setter magicos
 
-    public function __set($property, $value)
-    {
+  public function __set($property, $value)
+{
+    // Validar genre
+        if ($property === 'genre') {
+            $this->genre = $this->checkGenre($value) ? $value : "desconocido";
+            return;
+        }
+
+         // Validar año
+        if ($property === 'year') {
+            $this->year = $this->checkYear($value) ? $value : -1;
+            return;
+        }
+
+        // Para otras propiedades privadas
         $this->$property = $value;
-        $this->$checkAge($age)=$value; // esto rtiene que ser diferente
-        checkSpecies(); //Esto tiene que ser diferete
-    }
+}
+
+
 
     public function __get($property)
     {
         return  $this->$property;
     }
+
+
+
+
 }
 
 
