@@ -21,12 +21,7 @@ $anime3->addCharacter(new Character("Mikasa Ackerman", 19, "humano"));
 <head>
     <meta charset="UTF-8">
     <title>Lista de Animes</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: darkblue; }
-        .anime { margin-bottom: 25px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        footer { margin-top: 40px; font-size: 14px; text-align: center; color: gray; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Animes y Personajes</h1>
