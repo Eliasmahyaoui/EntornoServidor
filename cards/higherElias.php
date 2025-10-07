@@ -12,7 +12,6 @@
 <body>
 
     <div id="header-principal">
-
         <h1>Higher Card</h1>
         <?php
         require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php');
@@ -29,7 +28,7 @@
         $deck = generateFrenchDeck();
 
 
-        /*Con la funcion shufle lo podnra aleatorio*/
+        /*Con la funcion shufle lo pondrá aleatorio*/
         shuffle($deck);
 
         /*Esto es puntual para mostrarlo por ahora*/
@@ -42,39 +41,29 @@
             $hand1[] = array_pop($deck);
             $hand2[] = array_pop($deck);
         }
-        //ahora lo que hacemos es darla nombres a los dos jugaodres
+        //ahora lo que hacemos es darla nombres a los dos jugadores
         $player1 = "Harry";
         $player2 = "Voldemord";
 
-
         //ahora deberemos mostrar las cartas que tiene cada jugador.
-        ?>
-    </div>
-    <div id="cartas-higher">
-        <?php
         echo '<h2>' . $player1 . '</h2>';
-
         foreach ($hand1 as $card) {
-
             echo '<img src="/images/baraja/' . $card['image'] . '" alt="card">';
         }
 
         echo '<h2>' . $player2 . '</h2>';
-
         foreach ($hand2 as $card) {
 
             echo '<img src="/images/baraja/' . $card['image'] . '" alt="card">';
         }
-        ?>
-
-        <div id=puntuacion-players>
-            <?php
+        
+        
             //Los puntos del jugador 1 y jugador 2
             $points1 = 0;
             $points2 = 0;
 
             //Recorremos cada carta individual
-            for ($i = 0; $i < 10; $i++) {
+            for ($i = 0; $i < 10; $i++) { 
                 $card1 = $hand1[$i];
                 $card2 = $hand2[$i];
 
@@ -114,12 +103,7 @@
             }
 
             echo '<h2>' . "Resultado de la partida" . '</h2>';
-            ?>
-        </div>
-
-        <div>
-            <?php
-            // Por último, se deberán mostrar las puntuaciones de los dos jugadores e
+            // Por último, se deberán mostrar las puntuaciones de los dos jugadores 
             echo '<strong>Puntuacion ' . $player1 . ' ' . $points1 . ' puntos<strong>';
             echo "<br>";
             echo 'Puntuacion ' . $player2 . ' ' . $points2 . ' puntos ';

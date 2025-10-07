@@ -1,3 +1,4 @@
-<h1>Elias Mahyaoui Fellah</h1>
-<br>
-<img src="images/fotodeperfil.jpg" alt="Foto del autor ">
+<footer>
+    <p>Elias Mahyaoui</p>
+    <img src="images/fotoCarnet.jpeg" alt="Foto carnet" height="200">
+</footer>

@@ -1,40 +1,18 @@
+<?php require_once "includes/getdeck.inc.php"; ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Inicio</title>
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
+<?php require_once "includes/header.inc.php"; ?>
+<?php require_once "includes/getdeck.inc.php"; ?>
 
-    <div id="header-principal">
-        <h1>Cartas cartitas</h1>
-        <?php
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/header.inc.php');
-        ?>
-    </div>
+    <h2>Bienvenido a la aplicación de cartas</h2>
+    <img src="images/imagen-casino.jpg" alt="Casino">
 
-
-    <div id="contenido-principal">
-        <section id="imagen-inicio">
-            <img src="images/imagen-casino.jpg" alt="imagenCasino">
-        </section>
-
-    </div>
-
-
-
-    <div id="footer-principal">
-        <?php
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.inc.php');
-        ?>
-    </div>
-
-
+<?php require_once "includes/footer.inc.php"; ?>
 </body>
-
 </html>

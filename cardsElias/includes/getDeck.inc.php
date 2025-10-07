@@ -1,28 +1,23 @@
-
 <?php
-function generateFrenchDeck() {
-    $suits = ['corazones' => 'cor', 'diamantes' => 'rom','picas' => 'pic','treboles' => 'tre' ];
-
-    $values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-
+function getDeck() {
     $deck = [];
+    $palos = ["cor", "rom", "tre", "pic"];
+    $valores = ["1","2","3","4","5","6","7","8","9","10","J","Q","K"];
 
-    // Generar cartas normales
-    foreach ($suits as $suitName => $prefix) {
-        foreach ($values as $value) {
-            $image = strtolower($prefix . '_' . strtolower($value) . '.png');
+    for ($i=0; $i<count($palos); $i++) {
+        for ($j=0; $j<count($valores); $j++) {
             $deck[] = [
-                'suit' => $suitName,
-                'value' => $value,
-                'image' => $image
+                "suit" => $palos[$i],
+                "value" => $valores[$j],
+                "image" => $palos[$i] . "_" . $valores[$j] . ".png"
             ];
         }
     }
 
-    // Agregar comodines
-    $deck[] = ['suit' => 'comodin', 'value' => '0', 'image' => 'jok_1.png'];
-    $deck[] = ['suit' => 'comodin', 'value' => '0', 'image' => 'jok_2.png'];
+    // comodines
+    $deck[] = ["suit"=>"comodin", "value"=>"0", "image"=>"jok_1.png"];
+    $deck[] = ["suit"=>"comodin", "value"=>"0", "image"=>"jok_2.png"];
+
     return $deck;
 }
-
-
+?>
