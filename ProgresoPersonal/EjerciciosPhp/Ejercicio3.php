@@ -17,11 +17,7 @@
         <input type="submit" value="Enviar">
     </form>
 
-    <?php
-    if (isset(Zona_horaria)) {
-        # code...
-    }
-    ?>
+    
 
 </body>
 </html>
