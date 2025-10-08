@@ -11,13 +11,9 @@
         <?php
         require_once($_SERVER['DOCUMENT_ROOT'] .'/includes/functionselias.inc.php');
         
-        
-
-
         //Declaramos dos numero saleaotrios para probar
         $a= rand(1,20);
         $b= rand(1,20);
-
 
        echo $a . " + " . $b . " = " . elias_add($a, $b);
 

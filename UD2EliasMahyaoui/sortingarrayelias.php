@@ -16,12 +16,36 @@
    //mostramos el array original
    echo "<h3> Array original:</h3>";
 
-   for ($i=0; $i <10 ; $i++) { 
-        echo $nums[$i] . " ";
+
+   foreach ($nums as $key) {
+    echo $key . " ";
    }
+   /*for ($i=0; $i <10 ; $i++) { 
+        echo $nums[$i] . " ";
+   }*/
    echo "<br>";
 
    /*Ordenar el array por seleccion directa sin usar ninguna función.*/
+
+
+   for ($i=0; $i <10; $i++) { 
+        for ($j=0; $j <10 ; $j++) { 
+            if ($nums[$i] > $nums[$j]) {
+                $aux= $nums[$i];
+                $nums[$i]= $nums[$j];
+                $nums[$j]= $aux;
+            }
+        }
+   }
+
+
+
+
+
+
+
+
+
     for ($i=0; $i < 10 ; $i++) { 
           for ($j=$i+1; $j < 10 ; $j++) { 
                 if ($nums[$i] > $nums[$j]) {
