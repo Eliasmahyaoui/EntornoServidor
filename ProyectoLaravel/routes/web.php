@@ -7,6 +7,7 @@ Route::get('/', function () {
     return 'proyecto Laravel Elias <br><a href="'.route('saludo',['name'=>'Rick']). ' ">Rick</a>';
 });
 
+
 Route::get('datetime', function () {
     return date('d/m/y h:i:s');
 });
@@ -29,5 +30,4 @@ Route::get('greet/{name}', function (string $name) {
 
 
 Route::redirect('date','datetime');
-
 
