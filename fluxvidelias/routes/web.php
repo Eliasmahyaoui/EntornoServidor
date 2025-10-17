@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-})->name('Inicio');
+})->name('inicio');
 
 Route::get('movies', function () {
     // Array de 10 películas frikis de los 80
@@ -66,7 +66,7 @@ Route::get('movies', function () {
 
 
     return view('movies.index', compact('peliculas'));
-})->name('Listado de peliculas');
+})->name('listfilms');
 
 
 
