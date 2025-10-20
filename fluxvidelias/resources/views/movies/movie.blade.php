@@ -1,1 +1,3 @@
-<div>Pelicula: {{ $pelicula['titulo'] }} {{ $pelicula['director'] }} {{ $pelicula['anio'] }} </div>
+<div>
+    Pelicula: {{ $pelicula['titulo'] }} {{ $pelicula['director'] }} {{ $pelicula['anio'] }}
+</div>

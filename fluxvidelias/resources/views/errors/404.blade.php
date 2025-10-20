@@ -1,7 +1,6 @@
 @extends('layout.layout')
 
 @section('content')
-<h1>Ficha de la pelicula {{$id}}</h1>
+<h1>No se ha encontrado el contenido </h1>
 @endsection
-
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,10 +10,8 @@
 
 <body>
     @include('layout.partials.nav')
-    
     @yield('content')
     @yield('layout.partials.footer')
-
 </body>
 
 </html>

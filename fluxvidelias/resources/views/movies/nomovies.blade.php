@@ -1,2 +1,3 @@
-<div>
-   No hay peliculas</div>
+
+
+<div> No hay peliculas</div>

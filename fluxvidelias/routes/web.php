@@ -8,7 +8,6 @@ Route::get('/', function () {
 })->name('inicio');
 
 Route::get('movies', function () {
-    // Array de 10 películas frikis de los 80
     $peliculas = [
         [
             "titulo" => "Star Wars: Episodio V - El Imperio Contraataca",
@@ -62,15 +61,11 @@ Route::get('movies', function () {
         ]
     ];
 
-    $peliculas=[];
+
 
 
     return view('movies.index', compact('peliculas'));
 })->name('listfilms');
-
-
-
-
 
 Route::get('movies/{id}', function (int $id) {
     return view('movies.show', compact('id'));
