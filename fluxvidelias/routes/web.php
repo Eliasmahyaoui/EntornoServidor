@@ -62,7 +62,7 @@ Route::get('movies', function () {
         ]
     ];
 
-    $peliculas=[];
+   
 
 
     return view('movies.index', compact('peliculas'));
