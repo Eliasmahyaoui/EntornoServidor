@@ -61,7 +61,11 @@ Route::get('movies', function () {
         ]
     ];
 
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> e9211cdd52bae942827f363ac54f6ab2d64ba03f
 
 
     return view('movies.index', compact('peliculas'));
