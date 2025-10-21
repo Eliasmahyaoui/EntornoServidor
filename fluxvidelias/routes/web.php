@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('inicio');
+Route::get('/', [IndexController::class, 'index'])->name('inicio');
+
 
 Route::get('movies', function () {
     $peliculas = [
@@ -60,13 +60,6 @@ Route::get('movies', function () {
             "anio" => 1988
         ]
     ];
-
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> e9211cdd52bae942827f363ac54f6ab2d64ba03f
-
 
     return view('movies.index', compact('peliculas'));
 })->name('listfilms');
