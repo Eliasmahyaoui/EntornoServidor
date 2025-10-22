@@ -5,8 +5,10 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LegalsController;
 use Illuminate\Support\Facades\Route;
 
-
+//Ruta  de una accion
 Route::get('/', IndexController::class)->name('inicio');
+
+//Ruta de varios recursos
 Route::resource('actors',ActorController::class)->except(['destroy', 'store', 'update']);
 
 //Ruta de varias acciones

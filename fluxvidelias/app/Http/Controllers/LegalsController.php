@@ -7,6 +7,6 @@ use Illuminate\View\View;
 
 class LegalsController extends Controller
 {
-
+    
 
 }
