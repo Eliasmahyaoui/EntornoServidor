@@ -2,5 +2,5 @@
 
 @section('content')
 <h1>Editar</h1>
-<p>editar actores</p>
+<p>Editar actores</p>
 @endsection
