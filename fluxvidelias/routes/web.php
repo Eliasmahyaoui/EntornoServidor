@@ -1,10 +1,17 @@
 <?php
 
+use App\Http\Controllers\ActorController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LegalsController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [IndexController::class, 'index'])->name('inicio');
+Route::get('/', IndexController::class)->name('inicio');
+Route::resource('actors',ActorController::class)->except(['destroy', 'store', 'update']);
+
+//Ruta de varias acciones
+Route::get('faq', [LegalsController::class,'faq'])->name('faq');
+Route::get('cookies', [LegalsController::class,'cookies'])->name('cookies');
 
 
 Route::get('movies', function () {
