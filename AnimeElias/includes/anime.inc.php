@@ -67,12 +67,20 @@ class Anime
     public function __set($property, $value)
     {
         if ($property === 'genre') {
-            $this->genre = $this->checkGenre($value) ? $value : "desconocido";
-        } elseif ($property === 'year') {
-            $this->year = $this->checkYear($value) ? $value : -1;
-        } else {
-            $this->$property = $value;
+            if ($this->checkGenre($value)) {
+                $this->genre = $value;
+            } else {
+                $this->genre = "desconocido";
+            }
+
+
+            if ($property === 'year') {
+                if ($this->checkYear($value)) {
+                    $this->year = $value;
+                } else {
+                    $this->year = -1;
+                }
+            }
         }
     }
 }
-?>
