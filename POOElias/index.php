@@ -1,6 +1,6 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/coche.inc.php')
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/persona.inc.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/coche.inc.php')
     <?php
     //creamos los objetos 
     $liam = new Persona(19,' liam','liam@gmail', 'Francia');
-
+    
    echo $liam->mail;
    echo $liam->__get('mail');
 
