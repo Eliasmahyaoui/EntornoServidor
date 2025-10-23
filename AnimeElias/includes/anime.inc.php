@@ -15,6 +15,17 @@ class Anime
         $this->title = $title;
         $this->autor = $autor;
         $this->episodes = $episodes;
+
+
+        if ($this->checkGenre($genre)) {
+                if ($this) {
+                    $this->genre= $genre;
+                }else{
+                    $this->$genre="deconocido";
+                }
+        }
+
+
         $this->genre = $this->checkGenre($genre) ? $genre : "desconocido";
         $this->year = $this->checkYear($year) ? $year : -1;
         $this->characters = [];
