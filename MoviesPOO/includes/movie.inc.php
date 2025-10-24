@@ -41,12 +41,10 @@ class Movie
 
     //Getter magico
     public function __get($property)
-    {
-        if (property_exists($this, $property)) {
-            return $this->$property;
+    {   
+        if (isset($this->property)) {
+            return $this->property;
         }
-
-        return null;
     }
 
 
@@ -54,7 +52,9 @@ class Movie
     //Setter magico 
     public function __set($property, $value)
     {
-        $this->$property = $value;;
+        if (isset($this->property)) {
+            $this->property= $value;
+        }
 
 
 
@@ -119,8 +119,9 @@ class Movie
         return false;
     }
 
-    public function countCharacter()
+    public function countCharacter():int
     {
+        return count($this->actors);
         
     }
 }

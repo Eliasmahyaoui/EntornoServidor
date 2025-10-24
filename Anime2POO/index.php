@@ -18,6 +18,7 @@ require_once 'includes/character.inc.php';
 
 
 $anime1 = new Anime("Naruto", "Masashi Kishimoto", 2002, "Shonen", 220);
+
 $char1 = new Character("Naruto Uzumaki",2015,"chino","humano");
 $char2 = new Character("Sasuke Uchiha",2015,"chino","titan");
 
