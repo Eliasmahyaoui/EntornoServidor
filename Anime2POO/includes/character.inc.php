@@ -52,6 +52,14 @@ class Character
                 $this->property = -1;
             }
         }
+
+        if ($property === "species") {
+            if ($this->checkAge($value)) {
+                $this->property = $value;
+            } else {
+                $this->property = "desconocida";
+            }
+        }
     }
 
 

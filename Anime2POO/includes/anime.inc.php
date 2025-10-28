@@ -41,7 +41,6 @@ class Anime
 
     public function checkYear($year): bool
     {
-
         return $year >= 1917;
     }
 

@@ -7,7 +7,7 @@ use Illuminate\View\View;
 
 class IndexController extends Controller
 {
-    
+
     public function __invoke(Request $request): View
     {
         return view('index');
