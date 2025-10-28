@@ -52,6 +52,7 @@ class Character
                 $this->property = -1;
             }
         }
+<<<<<<< HEAD
 
         if ($property === "species") {
             if ($this->checkAge($value)) {
@@ -61,7 +62,18 @@ class Character
             }
         }
     }
+=======
+>>>>>>> 02280eb50653efdd104cf52ce798c9afcac16e07
 
+
+        if ($property === "species") {
+            if ($this->checkAge($value)) {
+                $this->property = $value;
+            } else {
+                $this->property = "desconocida";
+            }
+        }
+    }
 
     //Metodo checkAge
 
