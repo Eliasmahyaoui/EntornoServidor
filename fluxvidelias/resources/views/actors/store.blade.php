@@ -8,8 +8,8 @@ TITULO
 @section('content')
 
 @foreach ($actor as $key =>$value )
-
-@endforeach 
+    <h3>{{$key}} : {{$value}}</h3>
+@endforeach
 
 @endforeach
 
