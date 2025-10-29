@@ -30,10 +30,15 @@ class ActorController extends Controller
     }
 
 
-    /*public function store(Request $request)
+    public function store(Request $request)
     {
-        //
-    }*/
+        $actor['name'] = $request->input('name');
+        $actor['nacionalidad'] = $request->input('nacionalidad');
+        $actor['bornbirthday'] = $request->input('bornbirthday');
+        return view('actors.store', compact('actor'));
+
+
+    }
     /*public function update(Request $request, string $id)
     {
         //

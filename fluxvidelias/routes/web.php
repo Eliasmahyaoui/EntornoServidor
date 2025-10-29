@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', IndexController::class)->name('inicio');
 
 //Ruta de varios recursos
-Route::resource('actors',ActorController::class)->except(['destroy', 'store', 'update']);
+Route::resource('actors',ActorController::class);
 
 //Ruta de varias acciones
 Route::get('faq', [LegalsController::class,'faq'])->name('faq');
