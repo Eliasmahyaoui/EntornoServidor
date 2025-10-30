@@ -20,5 +20,5 @@
 @endsection
 
 @section('title')
-tEXTO AÑADE UN UNEVO ACTOR
+ AÑADE UN UNEVO ACTOR
     @endsection

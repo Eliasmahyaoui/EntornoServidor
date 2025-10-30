@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//RuTAS DE VARIOS RECURSOS 
+//RuTAS DE VARIOS RECURSOS
 
 
 
@@ -14,3 +14,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 })->name('index');
+
+
+Route::get('Jugadores', function(){
+
+    return view('jugadores');
+})->name('jugadores');
+

@@ -1,3 +1,12 @@
-<div>
-    <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
-</div>
+@extends('layout.layout');
+
+@section('title')
+
+@endsection
+
+@section('content')
+
+
+
+@endsection
+
