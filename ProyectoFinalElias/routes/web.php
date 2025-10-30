@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//RUTAS
+//RUTAS NORMALES 
 Route::get('/', function () {
     return view('index');
 })->name('index');
