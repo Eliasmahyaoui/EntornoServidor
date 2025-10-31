@@ -11,7 +11,6 @@ TITULO
     <h3>{{$key}} : {{$value}}</h3>
 @endforeach
 
-@endforeach
 
 <h1>Name{{$actor['name']}}</h1>
 @endsection

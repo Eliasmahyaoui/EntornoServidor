@@ -17,6 +17,15 @@
         <input type="submit" value="enviar">
 
     </form>
+
+    @if ($errors-> any())
+        Hay errores en el formulario: <br>
+        @foreach ($errors -> all() as $error)
+            {{$error}} <br>
+        @endforeach
+    @endif
+
+
 @endsection
 
 @section('title')

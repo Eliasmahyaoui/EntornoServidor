@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ActorRequest;
 use Illuminate\Http\Request;
 
 use Illuminate\View\View;
@@ -30,13 +31,12 @@ class ActorController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(ActorRequest $request)
     {
         $actor['name'] = $request->input('name');
         $actor['nacionalidad'] = $request->input('nacionalidad');
         $actor['bornbirthday'] = $request->input('bornbirthday');
         return view('actors.store', compact('actor'));
-
 
     }
     /*public function update(Request $request, string $id)
