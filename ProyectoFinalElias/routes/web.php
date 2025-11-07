@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventsController; //Esto hay que ponerlo porque si no no te coge las rutas de tipo recurso ni de sola una accion
+use App\Http\Controllers\PlayersController;
 
 //RUTAS DE SOLA UNA ACCION
 
-
-
 //RuTAS DE VARIOS RECURSOS
-
+Route::resource('events',EventsController::class);
+Route::resource('players', PlayersController::class);
 
 
 //RUTAS NORMALES
@@ -16,22 +17,20 @@ Route::get('/', function () {
 })->name('index');
 
 
-Route::get('eventos', function(){
-
-    return view('eventos');
-})->name('eventos');
 
 
-Route::get('jugadores', function(){
-
-    return view('jugadores');
-})->name('jugadores');
 
 
-Route::get('contacto', function(){
+Route::get('players', function(){
 
-    return view('contacto');
-})->name('contacto');
+    return view('players');
+})->name('players');
+
+
+Route::get('contact', function(){
+
+    return view('contact');
+})->name('contact');
 
 
 Route::get('dondeEstamos', function(){

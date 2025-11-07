@@ -1,11 +1,11 @@
 <nav>
     <ul>
-        <a href="{{ route('index') }}">Inicio</a>
-        <a href="{{ route('jugadores')}}">Jugadores</a>
-        <a href="{{ route('eventos') }}">eventos</a>
-        <a href="{{ route('dondeEstamos') }}">dondeEstamos</a>
-        <a href="{{ route('contacto') }}">contacto</a>
-        <a href="{{}}"></a>
+        <a href="{{ route('index') }}">INDEX</a>
+        <a href="{{ route('players') }}">PLAYERS</a>
+        <a href="{{ route('events') }}">EVENTS</a>
+        <a href="{{ route('wherearewhy') }}">WEAREWHY</a>
+        <a href="{{ route('contact') }}">CONTACT</a>
+        <a href="{{route ('store') }}">STORE</a>
 
     </ul>
 </nav>
