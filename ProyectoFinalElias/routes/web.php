@@ -17,20 +17,10 @@ Route::get('/', function () {
 })->name('index');
 
 
-
-
-
-
-Route::get('players', function(){
-
-    return view('players');
-})->name('players');
-
-
 Route::get('contact', function(){
 
-    return view('contact');
-})->name('contact');
+    return view('contacto');
+})->name('contacto');
 
 
 Route::get('dondeEstamos', function(){
