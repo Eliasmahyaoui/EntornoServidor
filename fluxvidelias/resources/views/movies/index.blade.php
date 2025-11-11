@@ -1,11 +1,10 @@
 @extends('layout.layout')
 
 @section('content')
-    @forelse ($peliculas as $pelicula)
+    @forelse ($movies as $movie)
         <div>
-            Titulo: {{ $pelicula['titulo'] }}<br>
-            Director: {{ $pelicula['director'] }}<br>
-            Año: {{ $pelicula['anio'] }}
+           <a href="{{route('movies.show',$movie)}}"> Titulo: {{$movie->title}}</a><br>
+
         </div>
         <br>
     @empty
