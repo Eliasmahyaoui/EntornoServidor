@@ -8,10 +8,10 @@
 
 @section('content')
  @forelse ($characters as $character)
-        <a href="{{route('characters.show', $anime)}}">{{$anime->title}}</a>
+        <a href="{{route('characters.show', $character)}}">{{$character->name}}</a>
         <p>nombre:{{$character->name}}</p>
-        <a href="{{route('characters.show', $anime->nombre )}}"></a>
+        <a href="{{route('characters.show', $character->name)}}"></a>
     @empty
-        <p>No hay nombres</p>
+        <p>No hay characters</p>
     @endforelse
 @endsection

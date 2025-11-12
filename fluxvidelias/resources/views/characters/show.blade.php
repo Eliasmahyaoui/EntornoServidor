@@ -2,12 +2,11 @@
 
 
 @section('title')
-
 @endsection
 
 
 
 @section('content')
-    {{ $character->title }}
-    <a href="{{ route('character.index') }}">Volver</a>
+    {{ $character->name }}
+    <a href="{{ route('characters.index') }}">Volver</a>
 @endsection
