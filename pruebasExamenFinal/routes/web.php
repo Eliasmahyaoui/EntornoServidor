@@ -1,11 +1,69 @@
-<?php
+    <?php
 
+use App\Http\Controllers\actorController;
 use Illuminate\Support\Facades\Route;
+    use App\Http\Controllers\indexController;
+use App\Http\Controllers\legalsController;
 
-//RUTAS SIMPLES
+    //SOLO UNA ACCION
+    Route::get('index', IndexController::class)->name('index');
+
+
+    //DE TIPO RECURSO
+    Route::resource('actors', actorController::class)->except('destroy', 'store', 'update');
+
+    //DE VARIAS ACCIONES
+    Route::get('faq',[legalsController::class, 'faq']);
+    Route::get('cookies',[legalsController::class, 'cookies']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RUTAS CON PARAMETROS
 Route::get('gretting/{name}', function (string $name) {
-    return 'Hola '. $name;
-});
+    return view('persons.gretting', compact('name'));
+})->where('name', '[A-Za-z]+');
 
 
 Route::get('gretting/{name}/{edad}', function (string $name, int $edad) {
@@ -22,7 +80,7 @@ Route::get('gretting/{name}', function (string $name) {
 
 })->where('name', '[A-Za-z]+');
 
-//DEBERA CONTENER NUMEROS 
+//DEBERA CONTENER NUMEROS
 Route::get('gretting/{id}',function (string $id){
     return 'El numero es  ' . $id;
-})->where('id', '[0-9]+');
+})->where('id', '[0-9]+'); */
