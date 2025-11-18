@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 //Ruta  de una accion
 Route::get('/', IndexController::class)->name('inicio');
 
-//Ruta de varios recursos
+//Ruta de tipo recurso
 Route::resource('actors',ActorController::class);
 
 //Ruta de varias acciones

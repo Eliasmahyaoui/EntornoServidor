@@ -1,10 +1,10 @@
 @extends('layout.layout')
 
 @section('title')
-Empezando con controladores 
+index peliculas 
 @endsection
 
 
 @section('content')
-    ESTA VISTA SE ESTA LLAMANDO DESDE EL CONTROLADOR PRIMO
+   Vista de el index de peliculas
 @endsection

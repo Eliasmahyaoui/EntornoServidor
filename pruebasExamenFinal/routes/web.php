@@ -1,20 +1,21 @@
     <?php
 
-use App\Http\Controllers\actorController;
+
 use Illuminate\Support\Facades\Route;
-    use App\Http\Controllers\indexController;
-use App\Http\Controllers\legalsController;
+use App\Http\Controllers\indexController;
+use App\Http\Controllers\legalController;
+use App\Http\Controllers\actorController;
 
     //SOLO UNA ACCION
     Route::get('index', IndexController::class)->name('index');
 
 
     //DE TIPO RECURSO
-    Route::resource('actors', actorController::class)->except('destroy', 'store', 'update');
+    Route::resource('actors', actorController::class)->except('destroy');
 
     //DE VARIAS ACCIONES
-    Route::get('faq',[legalsController::class, 'faq']);
-    Route::get('cookies',[legalsController::class, 'cookies']);
+    Route::get('faq',[legalController::class, 'faq'])->name('faq');
+    Route::get('cookies',[legalController::class, 'cookies'])->name('cookies');
 
 
 

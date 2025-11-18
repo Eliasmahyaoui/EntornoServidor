@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
+//use Illuminate\View\View;
+
 class actorController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index():View
+    public function index()
     {
         return view('actors.index');
     }
@@ -20,39 +22,43 @@ class actorController extends Controller
      */
     public function create()
     {
-        return view('actors.create');
+        return view('actors.create')    ;
     }
 
     /**
      * Store a newly created resource in storage.
      */
-   /* public function store(Request $request)
+   public function store(Request $request):View
     {
-        //
-    }*/
+
+        $actor['name'] = $request->input('name');
+        $actor['nacionalidad']= $request->input('nacionalidad');
+        $actor['bornbirthday']= $request->input('bornbirthday');
+        return view('actors.store',compact('actor'));
+    }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $actor)
     {
-        return view('actors.show');
+        return view('actors.show',compact('id'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $actor)
     {
-        return view('actors.edit');
+        return view('actors.edit',compact('id'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    /*public function update(Request $request, string $id)
+    public function update(Request $request, string $id)
     {
-        //
+
     }
 
     /**

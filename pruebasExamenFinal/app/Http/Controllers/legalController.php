@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class legalsController extends Controller
+class legalController extends Controller
 {
         public function faq():View
         {
