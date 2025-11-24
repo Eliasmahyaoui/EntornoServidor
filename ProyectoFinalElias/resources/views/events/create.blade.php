@@ -1,3 +1,14 @@
-<div>
-    <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
-</div>
+@extends('layout.layout');
+
+@section('title')
+    Eventos
+@endsection
+
+@section('content')
+    <form action="{{ route('events.store') }}" method="post">
+        @csrf
+
+
+
+    </form>
+@endsection

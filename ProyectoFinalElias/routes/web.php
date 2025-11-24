@@ -12,7 +12,6 @@ use App\Http\Controllers\StoreController;
 
 //RUTAS DE SOLA UNA ACCION
 route::get('/', IndexController::class)->name('Inicio');
-route::get('contacto', ContactController::class)->name('contacto');
 route::get('dondeEstamos', DondeEstamosController::class)->name('dondeEstamos');
 route::get('tienda', StoreController::class)->name('tienda');
 
@@ -20,6 +19,7 @@ route::get('tienda', StoreController::class)->name('tienda');
 //RuTAS DE VARIOS RECURSOS
 Route::resource('events', EventsController::class);
 Route::resource('players', PlayersController::class);
+Route::resource('Contacts', ContactController::class);
 
 
 //ESTAS RUTAS SE PONEN ASI CUANDO HACES UN CONTROLADOR NORMAL PERO TIENES QUE ESPECIFICARLOS

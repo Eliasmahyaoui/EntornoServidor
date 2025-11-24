@@ -1,12 +1,9 @@
 @extends('layout.layout')
 
 @section('title')
-Eventos
+    show
 @endsection
 
 @section('content')
-    <h1>Proximos eventos</h1>
-
-    
+    <h1>Muestra uno en concreto</h1>
 @endsection
-

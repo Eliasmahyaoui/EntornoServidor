@@ -1,12 +1,9 @@
 @extends('layout.layout')
 
 @section('title')
-Eventos
+    Formulario
 @endsection
 
 @section('content')
-    <h1>Proximos eventos</h1>
-
-    
+    <form action="{{route('')}}"></form>
 @endsection
-

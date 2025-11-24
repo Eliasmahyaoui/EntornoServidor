@@ -7,5 +7,11 @@
 @endsection
 
 @section('content')
-   formulario
+   <form action=" {{route('players.store')}}" method="post">
+    @csrf
+
+
+
+    
+   </form>
 @endsection

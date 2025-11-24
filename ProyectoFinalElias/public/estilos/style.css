@@ -18,6 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
 /* ============================
@@ -27,11 +28,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(90deg, #004080, #0066cc); /* azul Federación degradado */
+    background: linear-gradient(90deg, #004080, #0066cc);
+    /* azul Federación degradado */
     color: #fff;
     padding: 10px 20px;
     flex-wrap: wrap;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #barraNavegacion img {
@@ -39,7 +41,7 @@ body {
     width: auto;
     margin-right: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #barraNavegacion h1 {
@@ -79,7 +81,7 @@ main {
     padding: 30px 20px;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     flex-grow: 1;
 }
 
@@ -93,9 +95,10 @@ main img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 200px auto;
+    padding-left: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ============================
@@ -107,7 +110,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: auto;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
@@ -116,7 +119,8 @@ footer p {
 }
 
 footer a {
-    color: #ffcc00; /* amarillo para destacar enlaces */
+    color: #ffcc00;
+    /* amarillo para destacar enlaces */
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s;
