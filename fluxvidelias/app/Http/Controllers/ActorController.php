@@ -27,8 +27,9 @@ class ActorController extends Controller
 
     public function edit(string $id): View
     {
-        return view('actors.edit');
+ return view('actors.edit');
     }
+
 
 
     public function store(ActorRequest $request)

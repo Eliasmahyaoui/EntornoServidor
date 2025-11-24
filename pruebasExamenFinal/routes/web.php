@@ -6,6 +6,7 @@ use App\Http\Controllers\indexController;
 use App\Http\Controllers\legalController;
 use App\Http\Controllers\actorController;
 
+<<<<<<< HEAD
     //SOLO UNA ACCION
     Route::get('index', IndexController::class)->name('index');
 
@@ -85,3 +86,8 @@ Route::get('gretting/{name}', function (string $name) {
 Route::get('gretting/{id}',function (string $id){
     return 'El numero es  ' . $id;
 })->where('id', '[0-9]+'); */
+=======
+//RUTAS SIMPLES
+
+
+>>>>>>> f13a421c2d98b6ec9832c88d8d2102f71025fda1

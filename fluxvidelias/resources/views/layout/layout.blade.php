@@ -10,8 +10,8 @@
 
 <body>
     @include('layout.partials.nav')
-    @yield('content') 
-    @yield('layout.partials.footer')
+    @yield('content')
+    @include('layout.partials.footer')
 </body>
 
 </html>

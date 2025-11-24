@@ -13,9 +13,11 @@ class AnimeController extends Controller
     {
 
         $animes=Anime::orderBy('release_year','DESC')
-                       ->orderBy('title', 'ASC')
-                       ->get();
+
+                       ->orderBy('title', 'ASC')->simplepaginate(5);
+
         return view('animes.index', compact('animes'));
+
     }
 
 
@@ -34,7 +36,7 @@ class AnimeController extends Controller
     public function show(Anime $anime)
     {
         return view('animes.show', compact('anime'));
-     
+
     }
 
 
@@ -52,6 +54,7 @@ class AnimeController extends Controller
 
     public function destroy(Anime $anime)
     {
-        //
+        $anime->delete();
+        return redirect()->route('animes.index');
     }
 }
