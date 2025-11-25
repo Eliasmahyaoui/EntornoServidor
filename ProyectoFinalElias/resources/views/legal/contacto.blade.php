@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    <p>Aqui ira lo que tenga que ir de contacto</p>
+    <h1>Contacto de la web</h1>
 @endsection

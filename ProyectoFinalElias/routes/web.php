@@ -16,6 +16,8 @@ route::get('dondeEstamos', DondeEstamosController::class)->name('dondeEstamos');
 route::get('tienda', StoreController::class)->name('tienda');
 
 
+
+
 //RuTAS DE VARIOS RECURSOS
 Route::resource('events', EventsController::class);
 Route::resource('players', PlayersController::class);
@@ -25,3 +27,4 @@ Route::resource('Contacts', ContactController::class);
 //ESTAS RUTAS SE PONEN ASI CUANDO HACES UN CONTROLADOR NORMAL PERO TIENES QUE ESPECIFICARLOS
 Route::get('legal/privacidad', [LegalController::class, 'privacidad'])->name('legal.privacidad');
 Route::get('legal/cookies', [LegalController::class, 'cookies'])->name('legal.cookies');
+Route::get('legal/contacto', [LegalController::class, 'contacto'])->name('legal.contacto');

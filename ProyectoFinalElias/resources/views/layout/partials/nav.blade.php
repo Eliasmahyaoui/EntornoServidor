@@ -9,7 +9,7 @@
         <a href="{{ route('players.index') }}">Players</a>
         <a href="{{ route('events.index') }}">Events</a>
         <a href="{{ route('tienda') }}">Tienda</a>
-        <a href="{{ route('contacto') }}">Contacto</a>
+        <a href="{{ route('Contacts.index') }}">Contacto</a>
         <a href="{{ route('dondeEstamos') }}">Donde estamos</a>
 
     </nav>
