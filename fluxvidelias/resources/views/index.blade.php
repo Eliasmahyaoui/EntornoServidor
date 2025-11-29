@@ -2,8 +2,8 @@
 
 @section('content')
     <h1>"Bienvenido a fluxVid</h1>
-    <a href="{{route('actors.show', 123)}}">Ver actor con id 123</a>
-
+   <!-- <a href="{{route('actors.show', 123)}}">Ver actor con id 123</a>-->
+    <a href="{{route('characters.index')}}">Ver characters</a>
 @endsection
 
 

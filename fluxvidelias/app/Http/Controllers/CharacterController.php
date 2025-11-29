@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Anime;
 use App\Models\Character;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class CharacterController extends Controller
 {
@@ -22,9 +23,9 @@ class CharacterController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
-        //
+        return view('characters.create');
     }
 
     /**
@@ -32,7 +33,16 @@ class CharacterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $character= new Character();
+        $character ->name= $request->input('name');
+        $character ->age= $request->input('age');
+        $character ->gender= $request->input('gender');
+        $character ->role= $request->input('role');
+        $character ->description= $request->input('description');
+        $character->save();
+
+        return redirect()->route('characters.index');
+
     }
 
     /**
@@ -46,9 +56,9 @@ class CharacterController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Character $character)
+    public function edit(Character $character):View
     {
-        //
+        return view('characters.edit');
     }
 
     /**
@@ -56,14 +66,18 @@ class CharacterController extends Controller
      */
     public function update(Request $request, Character $character)
     {
-        //
+        $character->name= $request->input('name');
+        $character->age= $request->input('age');
+        $character->save();
+
+        return redirect()->route('characters.show', $character);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Character $character)
+    public function destroy(Character $character):View
     {
-        //
+        return view('characters.destroy');
     }
 }
