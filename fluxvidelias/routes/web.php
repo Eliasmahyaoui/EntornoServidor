@@ -25,6 +25,7 @@ Route::get('cookies', [LegalsController::class,'cookies'])->name('cookies');
 Route::resource('movies',MovieController::class);
 
 Route::resource('studios', StudioController::class);
+//Route::get('animes/addslug', [AnimeController::class, 'addSlug']);
 Route::resource('animes', AnimeController::class);
 Route::resource('characters', CharacterController::class);
 

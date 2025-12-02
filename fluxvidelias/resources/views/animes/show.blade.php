@@ -18,6 +18,7 @@
 
     <br>
     {{ $anime->title }}
+    
     <br>
     <a href="{{ route('animes.index') }}">Volver</a>
     <br>
