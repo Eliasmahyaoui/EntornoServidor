@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- En la ruta edit hay que hacer tambié un formulario para que se encargue de editar -->
 @extends('layout.layout')
 
@@ -24,7 +25,24 @@
 
 </form>
 @endsection
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+>>>>>>> ecbba96684e66dfc55ba58741a91e924fdf99f89
 
 
 
 
+<<<<<<< HEAD
+=======
+</body>
+</html>
+
+>>>>>>> ecbba96684e66dfc55ba58741a91e924fdf99f89
