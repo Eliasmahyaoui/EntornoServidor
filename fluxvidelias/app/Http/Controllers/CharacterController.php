@@ -25,7 +25,8 @@ class CharacterController extends Controller
      */
     public function create():View
     {
-        return view('characters.create');
+        $animes= Anime::get();
+        return view('characters.create', compact('animes'));
     }
 
     /**

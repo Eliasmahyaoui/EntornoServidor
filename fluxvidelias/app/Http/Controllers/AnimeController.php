@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anime;
+use App\Models\Studio;
 use Faker\Provider\Company;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AnimeController extends Controller
 {
@@ -23,13 +25,14 @@ class AnimeController extends Controller
 
     public function create()
     {
-        //
+        $studio= Studio::get();
+        return view('animes.create', compact('studio'));
     }
 
 
     public function store(Request $request)
     {
-        //
+         return redirect()->route('animes.create');
     }
 
 
@@ -57,4 +60,16 @@ class AnimeController extends Controller
         $anime->delete();
         return redirect()->route('animes.index');
     }
+
+
+    /*public function addSlug()
+    {
+        $animes= Anime::get();
+
+        foreach ($animes as $anime) {
+            $anime->slug=Str::slug($anime->title);
+            $anime->save();
+        }
+        return "todo hecho";
+    }*/
 }
