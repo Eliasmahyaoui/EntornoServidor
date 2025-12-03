@@ -35,22 +35,15 @@ class CharacterController extends Controller
     public function store(Request $request)
     {
         $character= new Character();
-<<<<<<< HEAD
+
         $character ->name= $request->input('name');
         $character ->age= $request->input('age');
         $character ->gender= $request->input('gender');
         $character ->role= $request->input('role');
         $character ->description= $request->input('description');
         $character->save();
-
         return redirect()->route('characters.index');
-=======
-        $character->name = $request->input('name');
-        $character->age = $request->input('age');
-        $character->gender = $request->input('gender');
-        $character->roles = $request->input('roles');
-        $character->description = $request->input('description');
->>>>>>> ecbba96684e66dfc55ba58741a91e924fdf99f89
+
 
     }
 

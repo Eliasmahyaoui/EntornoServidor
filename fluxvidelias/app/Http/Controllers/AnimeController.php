@@ -14,32 +14,48 @@ class AnimeController extends Controller
     public function index()
     {
 
-        $animes=Anime::orderBy('release_year','DESC')
+        $animes = Anime::orderBy('release_year', 'DESC')
 
-                       ->orderBy('title', 'ASC')->simplepaginate(5);
+            ->orderBy('title', 'ASC')->simplepaginate(5);
 
         return view('animes.index', compact('animes'));
-
     }
 
 
     public function create()
     {
-        $studio= Studio::get();
+        $studio = Studio::get();
         return view('animes.create', compact('studio'));
     }
 
 
     public function store(Request $request)
     {
-         return redirect()->route('animes.create');
+
+        $anime = new Anime();
+        $anime->title = $request->input('title');
+        $anime->release_year = $request->input('release_year');
+        $anime->episodes = $request->input('episodes');
+        $anime->rating = $request->input('rating');
+        $anime->has_manga = $request->input('has_manga');
+        $anime->synopsis = $request->input('synopsis');
+        $anime->tags = $request->input('tags');
+        $anime->studio_id = $request->input('studio');
+        $anime->save();
+
+
+
+
+
+
+
+        return redirect()->route('animes.create');
     }
 
 
     public function show(Anime $anime)
     {
         return view('animes.show', compact('anime'));
-
     }
 
 

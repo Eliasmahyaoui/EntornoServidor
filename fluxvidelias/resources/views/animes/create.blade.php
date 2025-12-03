@@ -45,8 +45,8 @@
 
         <select name="studio" id="studio">
             <option value="0">Selecciona un anime</option>
-            @foreach ($studios as $studio )
-             <option value="{{$anime->id}}">Value 2</option>
+            @foreach ($studio as $s )
+             <option value="{{$s->id}}">{{$s->name}}</option>
             @endforeach
 
             <option value="value3">Value 3</option>
